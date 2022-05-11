@@ -1,0 +1,34 @@
+﻿@model MotoStore.Models.Motobike
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<h2>Подтверждение удаления продукта</h2>
+
+<dl style="justify-content:center">
+
+    <dt>Название модели</dt>
+    <dd>@Html.DisplayFor(m => m.Name)</dd>
+    <dt>Компания</dt>
+    <dd>@Html.DisplayFor(m => m.Company)</dd>
+    <dt>Цена</dt>
+    <dd>@Html.DisplayFor(m => m.Price)</dd>
+    <dt>Тип мотоцикла</dt>
+    <dd>@Html.DisplayFor(m => m.Class)</dd>
+    <dt>Цвет</dt>
+    <dd>@Html.DisplayFor(m => m.Color)</dd>
+    <dt>Наличие товара</dt>
+    <dd>@Html.DisplayFor(m => m.Existence)</dd>
+    <dt>Мощность</dt>
+    <dd>@Html.DisplayFor(m => m.Power)</dd>
+    <dt>Год производства</dt>
+    <dd>@Html.DisplayFor(m => m.YearManufacture)</dd>
+    
+</dl>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+
+}

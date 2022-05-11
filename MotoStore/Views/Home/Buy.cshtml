@@ -1,0 +1,17 @@
+﻿@using MotoStore.Models;
+@model Motobike
+@{
+    ViewBag.Title = "Buy";
+}
+
+<div>
+    <form method="post" action="">
+        <input type="hidden" value="@ViewBag.MotoId" name="MotoId" />
+        <p  style="border-block:24px">Введите свое имя: </p>
+        <input type="text" name="Person" />
+        <p style="border-block:24px">Введите адрес доставки :</p>
+        <input type="text" name="Address" />
+        <input type="submit" value="Отправить" />
+
+    </form>
+</div>

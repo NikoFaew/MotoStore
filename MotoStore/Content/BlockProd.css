@@ -1,0 +1,48 @@
+﻿.body {
+    background: url(../Image/depositphotos_167258218-stock-illustration-vintage-monochrome-motorcycle-on-white.jpg);
+    font-family: Arial;
+    font-size: 15px;
+    height: 500px;
+    
+}
+.moto_img {
+    width: 200px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.moto_item {
+    width: 400px;
+    height:100px;
+    margin: 30px 20px;
+    padding: 0px;
+    text-align:center;
+    margin-bottom:44px
+    
+}
+.container2 {
+    display: inline-block;
+    width: 400px;
+    height: 340px;
+    border: 1px solid #808080;
+    margin-right: 0px;
+    padding-left:0;
+ float:right;
+   
+    
+}
+.footer {
+    flex: 0 0 auto;
+    position: relative;
+    height: 30%;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background: #6d6c6c;
+    overflow: hidden;
+    text-align: center;
+    min-height: 100%;
+    padding-bottom: 0px
+}

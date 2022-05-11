@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MotoStore.Models.Purchase>
+
+@{
+    ViewBag.Title = "Список покупателей";
+}
+
+<h1>Список покупателя</h1>
+
+<p>
+    @Html.ActionLink("Создать покупателя", "CreatePurchase")
+</p>
+<table class="table">
+    <tr>
+        <td>Покупатель</td>
+        <td>Адрес</td>
+        <td>Номер телефона</td>
+        <td>Дата</td>
+        <td></td>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Person)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MotoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+
+            </td>
+            <td>
+                @Html.ActionLink("Изменить", "EditPerson", new { id = item.PurchaseId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Информация", "DetailsPerson", new { id = item.PurchaseId }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Удалить", "DeletePerson", new { id = item.PurchaseId }, new { @class = "btn btn-primary" })
+               
+            </td>
+        </tr>
+    }
+
+</table>

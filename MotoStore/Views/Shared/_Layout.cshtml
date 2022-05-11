@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/Content/test.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – магазин на ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="navbar-text">
+                             Navbar
+                     </span>
+                 </button>
+                <p style="text-align:center;">
+                    @Html.ActionLink("MotoClick", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Список покупателей", "Index1", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Оплата", "PayInfo", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Доставка", "Delivery", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Контакты", "Contact", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Корзина", "CartPartial", "Cart", new { area = "" }, new { @class = "navbar-brand" })
+
+                </p>
+                <ul>
+                    
+                </ul>
+
+            </div>
+           
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year – ЧТОТиБ 2021</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+   
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@using MotoStore.Models
+@model Purchase
+
+@{
+    ViewBag.Title = "DeletePerson";
+}
+<dl style="justify-content:center">
+
+    <dt>Покупатель</dt>
+    <dd>@Html.DisplayFor(m => m.Person)</dd>
+    <dt>Адрес</dt>
+    <dd>@Html.DisplayFor(m => m.Address)</dd>
+    <dt>Дата</dt>
+    <dd>@Html.DisplayFor(m => m.Date)</dd>
+    
+</dl>
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Удалить" />
+
+}
+

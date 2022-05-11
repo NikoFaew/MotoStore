@@ -1,0 +1,45 @@
+﻿@using MotoStore.Helpers;
+@model MotoStore.Models.IndexViewModel
+@{
+    ViewBag.Title = "MotoClick";
+}
+
+
+
+    <link href="~/Content/BlockProd.css" rel="stylesheet" />
+    <p>
+        @Html.ActionLink("Добавить модель", "CreateProduct", FormMethod.Post, new { @class = "btn btn-primary" })
+    </p>
+
+@foreach (var mt in Model.Motobikes)
+{
+
+    <div class="container2">
+        <div class="moto_item">
+            <img class="moto_img" src="~/Image/img-fon.jpg" alt="" />
+            <h3>@mt.Name</h3>
+            <h4>@mt.Company</h4>
+            <p>@mt.Price.ToString(" #руб.")</p>
+
+            @Html.ActionLink("Купить", "Buy", new { id = mt.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Изменить", "Edit", new { id = mt.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Удалить", "Delete", new { id = mt.Id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Подробнее", "GetMoto", new { id = mt.Id }, new { @class = "btn btn-primary" })
+
+        </div>
+
+    </div>
+
+
+}
+<footer class="footer">
+        <div class="page2">
+            @Html.PageLinks(Model.PageInfo, x => Url.Action("Index", new { page = x }))
+        </div>
+
+</footer>
+
+    
+
+
+

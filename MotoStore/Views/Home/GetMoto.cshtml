@@ -1,0 +1,80 @@
+﻿@using MotoStore.Models
+@model Motobike
+
+@{
+    ViewBag.Title = "Информация о мотоцикле";
+}
+
+<h2>Информация о мотоцикле</h2>
+<link href="~/Content/BlockProd.css" rel="stylesheet" />
+<div>
+     
+    
+    <hr />
+    <img alt="" src="~/Image/img-fon.jpg" />
+    <table border="1" class="dl-horizontal">
+        <tr>
+            
+            <td>
+                Модель
+            </td>
+            <td>
+                Компания
+            </td>
+            <td>
+                Цена
+            </td>
+            <td>
+                Класс
+            </td>
+            <td>
+                Цвет
+            </td>
+            <td>
+                Наличие
+            </td>
+            <td>
+                Год выпуска
+            </td>
+            <td>
+                Мощность
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.Display("Name")
+            </td>
+            <td>
+                @Html.Display("Company")
+            </td>
+            <td>
+                @Html.Display("Price")
+            </td>
+            <td>
+                @Html.Display("Class")
+            </td>
+            <td>
+                @Html.Display("Color")
+            </td>
+            <td>
+                @Html.Display("Existence")
+            </td>
+            <td>
+                @Html.Display("YearManufacture")
+            </td>
+            <td>
+                @Html.Display("Power")
+            </td>
+
+
+
+
+        </tr>
+
+    </table>
+</div>
+<p>
+    
+    @Html.ActionLink("Back to List", "Index")
+</p>

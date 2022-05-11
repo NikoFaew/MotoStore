@@ -1,0 +1,26 @@
+﻿@model MotoStore.Models.Purchase
+
+@{
+    ViewBag.Title = "Редактирование покупателя";
+}
+
+<div>
+        <h1>Форма изменения покупателя</h1>
+    @using (Html.BeginForm("EditPer", "Home", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.PurchaseId);
+        <p>Имя клиента</p>
+        @Html.DropDownListFor(m => m.Person, ViewBag.Names as SelectList, "Person")<br />
+        <p>Адрес</p>
+        @Html.DropDownListFor(m => m.Address, ViewBag.Addreses as SelectList, "Address")<br />
+        <p>Время</p>
+        @Html.DropDownListFor(m => m.Date, ViewBag.Dates as SelectList, "Date")<br />
+        
+        
+
+        <input type="submit" value="send" />
+    }
+
+
+</div>
+
